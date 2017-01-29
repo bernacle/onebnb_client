@@ -16,6 +16,8 @@ import { RegisterComponent } from './users/register/register.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { ResetPasswordComponent } from './users/reset-password/reset-password.component';
+import { UpdatePasswordComponent } from './users/update-password/update-password.component';
  
  
 @NgModule({
@@ -26,7 +28,9 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    UserEditComponent
+    UserEditComponent,
+    ResetPasswordComponent,
+    UpdatePasswordComponent
   ],
   imports: [
     BrowserModule,
