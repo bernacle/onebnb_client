@@ -6,6 +6,7 @@ import { LoginComponent } from './users/login/login.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { ResetPasswordComponent } from './users/reset-password/reset-password.component';
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
+import { ResultsComponent } from './results/results.component';
 import { Angular2TokenService } from 'angular2-token';
  
  
@@ -15,8 +16,8 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService]},
-  { path: 'user/reset-password', component: ResetPasswordComponent},
-  { path: 'user/update-password', component: UpdatePasswordComponent},
+  { path: 'results', component: ResultsComponent}
+
 ];
  
 // Exporte a constante routing para importarmos ela no arquivo app.module.ts

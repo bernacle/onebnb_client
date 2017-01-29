@@ -18,6 +18,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { ResetPasswordComponent } from './users/reset-password/reset-password.component';
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
+import { ResultsComponent } from './results/results.component';
  
  
 @NgModule({
@@ -30,7 +31,8 @@ import { UpdatePasswordComponent } from './users/update-password/update-password
     FooterComponent,
     UserEditComponent,
     ResetPasswordComponent,
-    UpdatePasswordComponent
+    UpdatePasswordComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
