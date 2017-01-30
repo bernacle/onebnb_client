@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" class="collapse navbar-collapse" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isMenuCollapsed">
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="BUSCAR">
+          <app-search></app-search>
       </div>
     </form>
     <ul class="nav navbar-nav">
@@ -27,12 +27,12 @@
           <app-login></app-login>
         </ul>
       </ul>
-      <ul class="nav navbar-nav" dropdown (onToggle)="toggled($event)">
+      <!--<ul class="nav navbar-nav" dropdown (onToggle)="toggled($event)">
         <li><a href="/" dropdownToggle>ESQUECI MINHA SENHA</a></li>
         <ul class="dropdown-menu register-box" dropdownMenu aria-labelledby="simple-dropdown">
           <app-reset-password></app-reset-password>
         </ul>
-      </ul>
+      </ul>-->
       <ul class="nav navbar-nav" dropdown (onToggle)="toggled($event)">
         <li><a href="/" dropdownToggle>CADASTRE-SE</a></li>
         <ul class="dropdown-menu register-box" dropdownMenu aria-labelledby="simple-dropdown">
