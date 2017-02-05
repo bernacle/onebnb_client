@@ -4,19 +4,19 @@
       <app-filter></app-filter>
     </div>
     <div class="row">
-      <div *ngFor="let p of properties">
-        <app-property-box
-          name="{{p.property.name}}"
-          price="{{p.property.price}}"
-          photo="{{p.property.photos[0]}}"
-        ></app-property-box>
-      </div>
+        <div *ngFor="let p of properties">
+          <app-property-box
+            name="{{p.property.name}}"
+            price="{{ p.property.price }}"
+            photo="{{ p.property.photos[0] }}"
+          ></app-property-box>
+        </div>
     </div>
     <div class="row">
-      <app-pagination totalItems="{{ 20}}"></app-pagination>
+      <app-pagination totalItems="{{ properties.length }}"></app-pagination>
     </div>
   </div>
   <div class="col-md-5">
-    <app-map [mapPins]= "[]" [lat]="lat" [lng]="lng"></app-map>
+    <app-map [mapPins] = "mapPins" [lat] = "lat" [lng] = "lng"></app-map>
   </div>
 </div>
