@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule} from "ng2-bootstrap/ng2-bootstrap";
+import { CarouselModule, DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule} from "ng2-bootstrap/ng2-bootstrap";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
  
@@ -18,42 +18,47 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './shared/search/search.component';
-import { FilterComponent } from './shared/filter/filter.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
-import { PropertyBoxComponent } from './shared/property-box/property-box.component';
+import { FilterComponent } from './shared/filter/filter.component';
 import { MapComponent } from './shared/map/map.component';
+import { PropertyBoxComponent } from './shared/property-box/property-box.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
- 
+import { ReservationBoxComponent } from './shared/reservation-box/reservation-box.component';
+import { LightboxComponent } from './shared/lightbox/lightbox.component';
  
 @NgModule({
   declarations: [
-	AppComponent,
-	HomeComponent,
-	RegisterComponent,
-	LoginComponent,
-	HeaderComponent,
-	FooterComponent,
-	UserEditComponent,
-	ResultsComponent,
-	SearchComponent,
-	FilterComponent,
-	PaginationComponent,
-	PropertyBoxComponent,
-	MapComponent,
-	PropertyDetailsComponent
+    AppComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    HeaderComponent,
+    FooterComponent,
+    UserEditComponent,
+    ResultsComponent,
+    SearchComponent,
+    PaginationComponent,
+    FilterComponent,
+    MapComponent,
+    PropertyBoxComponent,
+    PropertyDetailsComponent,
+    ReservationBoxComponent,
+    LightboxComponent
   ],
   imports: [
-	BrowserModule,
-	FormsModule,
-	HttpModule,
-	routing,
-	AlertModule.forRoot(),
-	DropdownModule.forRoot(),
-	CollapseModule,
-	DatepickerModule.forRoot(),
-	PaginationModule.forRoot(),
-	AgmCoreModule.forRoot({
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    routing,
+    AlertModule.forRoot(),
+    DropdownModule.forRoot(),
+    CollapseModule,
+    DatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    CarouselModule.forRoot(),
+    ModalModule.forRoot(),
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDy76jHaL0Okb5X8m2Qxf2v6Y2TxHib2tk'
     })
   ],
