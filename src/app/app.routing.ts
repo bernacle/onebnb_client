@@ -8,6 +8,7 @@ import { ResetPasswordComponent } from './users/reset-password/reset-password.co
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
 import { ResultsComponent } from './results/results.component';
 import { Angular2TokenService } from 'angular2-token';
+import { PropertyDetailsComponent } from './property/property-details/property-details.component';
  
  
 // Cria nossas Rotas
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService]},
-  { path: 'results', component: ResultsComponent}
+  { path: 'results', component: ResultsComponent},
+  { path: 'property/:id', component: PropertyDetailsComponent}
 
 ];
  
