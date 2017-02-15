@@ -1,7 +1,7 @@
 <div class="row">
   <div class="row main-image" [ngStyle]="{'background-image': 'url(' + photos[0] + ')'}">
     <!-- Nosso Modal -->
-    <app-lightbox [photos] = "photos"></app-lightbox>
+    <!-- <app-lightbox [photos] = "photos"></app-lightbox> -->
   </div>
   <div class="row">
     <div class="col-md-8 details">
@@ -35,7 +35,7 @@
               <p *ngSwitchCase="'whole_bedroom'">Quarto Inteiro</p>
               <p *ngSwitchCase="'shared_bedroom'">Quarto Compartilhado</p>
             </div>
-          </div>
+          </div> 
           <div class="col-md-3 text-center">
             <div class="row">
               <i class="fa fa-user-circle details-icons"></i>
@@ -77,7 +77,7 @@
           </div>
           <div class="row">
             <div class="col-md-3">Banheiros:<b>{{ details.bathroom }}</b></div>
-            <div class="col-md-3">Camas:<b>{{ details.beds }}</b></div>
+            <div class="col-md-3">Camas:<b>{{ details.bedroom }}</b></div>
             <div class="col-md-3" [ngSwitch]="details.accommodation_type">
               <b *ngSwitchCase="'whole_house'">Casa Inteira</b>
               <b *ngSwitchCase="'whole_bedroom'">Quarto Inteiro</b>
@@ -108,11 +108,11 @@
           <h3 *ngIf="comments.length == 0">Sem comentários ainda</h3>
           <div class="col-md-10 col-md-offset-1">
             <div *ngFor="let comment of comments">
-               <app-comment-box [photo]="comment.photo"
-                                [name]="comment.name"
-                                [body]="comment.body"
-                                [date]="comment.date">
-               </app-comment-box> 
+              <app-comment-box [photo]="comment.photo"
+                               [name]="comment.name"
+                               [body]="comment.body"
+                               [date]="comment.date"
+                                ></app-comment-box>
             </div>
           </div>
         </div>
@@ -121,20 +121,37 @@
       <div class="row">
         <div class="col-md-12">
           <h3>Seu Anfitrião</h3>
-          <div class="col-md-3 col-md-offset-1">
-             <app-user-detail-box  [photo]="profile.photo"
-                                   [name]="profile.name"
-                                   [address]="profile.address"
-                                   [userid]="profile.id">
-            </app-user-detail-box> 
+          <div class="row">
+            <div class="col-md-3 col-md-offset-1">
+              <app-user-detail-box  [photo]="profile.photo"
+                                    [name]="profile.name"
+                                    [address]="profile.address"
+                                    [userid]="profile.id"></app-user-detail-box>
+            </div>
+            <div class="col-md-7 col-md-offset-1 send-message-box">
+              <app-send-message></app-send-message>
+            </div>
           </div>
-          <div class="col-md-9"></div>
         </div>
       </div>
       <hr>
     </div>
     <div class="col-md-4">
       <app-reservation-box></app-reservation-box>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Localização</h3>
+      <sebm-google-map class="sebm-google-map-container" [latitude]="lat" [longitude]="lng" [zoom]="16">
+        <sebm-google-map-marker
+            [latitude]="lat - 0.003"
+            [longitude]="lng"
+            [label]="Aqui"
+            [iconUrl]="'http://bootcamp.onebitcode.com/wp-content/uploads/2017/01/map_icon.png'">
+        </sebm-google-map-marker>
+      </sebm-google-map>
     </div>
   </div>
 </div>
