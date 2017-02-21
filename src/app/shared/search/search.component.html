@@ -1,3 +1,4 @@
 <div class="form-group">
-  <input min-chars="3" auto-complete [(ngModel)]="searchModel" [typeahead]="arrayAutocomplete" type="text" (keydown)="onEvent($event)" [value]="query" (input)="query = $event.target.value" class="form-control" placeholder="BUSCAR">
+  <input min-chars="3" auto-complete [(ngModel)]="searchModel" [typeahead]="arrayAutocomplete" [source]="arrayAutocomplete" type="text" (keydown)="onEvent($event)" [value]="query" (input)="query = $event.target.value" class="form-control" placeholder="BUSCAR">
 </div>
+

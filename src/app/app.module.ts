@@ -31,6 +31,7 @@ import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box
 import { SendMessageComponent } from './shared/send-message/send-message.component';
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { TypeaheadModule } from 'ng2-bootstrap';
+import { UsersService } from './shared/users.service';
  
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { TypeaheadModule } from 'ng2-bootstrap';
     Ng2AutoCompleteModule,
     TypeaheadModule.forRoot()
   ],
-  providers: [PropertiesService, Angular2TokenService],
+  providers: [PropertiesService, UsersService, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
