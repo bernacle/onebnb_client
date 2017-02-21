@@ -46,4 +46,9 @@ export class PropertiesService {
     return this.http.delete(environment.api_base_url + 'properties.json/' + id)
       .map(res => res.json());
   }
+
+  autocomplete(){
+    return this.http.get(environment.api_base_url + 'autocomplete.json')
+      .map(res => res.json());
+  };
 }

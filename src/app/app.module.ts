@@ -29,6 +29,8 @@ import { LightboxComponent } from './shared/lightbox/lightbox.component';
 import { CommentBoxComponent } from './shared/comment-box/comment-box.component';
 import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box.component';
 import { SendMessageComponent } from './shared/send-message/send-message.component';
+import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
+import { TypeaheadModule } from 'ng2-bootstrap';
  
 @NgModule({
   declarations: [
@@ -64,9 +66,9 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDy76jHaL0Okb5X8m2Qxf2v6Y2TxHib2tk'
-    })
+    AgmCoreModule.forRoot({apiKey: 'AIzaSyDy76jHaL0Okb5X8m2Qxf2v6Y2TxHib2tk'}),
+    Ng2AutoCompleteModule,
+    TypeaheadModule.forRoot()
   ],
   providers: [PropertiesService, Angular2TokenService],
   bootstrap: [AppComponent]
