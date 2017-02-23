@@ -32,6 +32,7 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { TypeaheadModule } from 'ng2-bootstrap';
 import { UsersService } from './shared/users.service';
+import { ReservationService } from './shared/reservation.service';
  
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { UsersService } from './shared/users.service';
     Ng2AutoCompleteModule,
     TypeaheadModule.forRoot()
   ],
-  providers: [PropertiesService, UsersService, Angular2TokenService],
+  providers: [PropertiesService, UsersService, ReservationService, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
