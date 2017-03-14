@@ -34,6 +34,7 @@ import { TypeaheadModule } from 'ng2-bootstrap';
 import { UsersService } from './shared/users.service';
 import { ReservationService } from './shared/reservation.service';
 import { TalksService } from './shared/talks.service';
+import { MenuComponent } from './shared/menu/menu.component';
  
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TalksService } from './shared/talks.service';
     LightboxComponent,
     CommentBoxComponent,
     UserDetailBoxComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
