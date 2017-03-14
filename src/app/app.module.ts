@@ -33,6 +33,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { TypeaheadModule } from 'ng2-bootstrap';
 import { UsersService } from './shared/users.service';
 import { ReservationService } from './shared/reservation.service';
+import { TalksService } from './shared/talks.service';
  
 @NgModule({
   declarations: [
@@ -72,7 +73,7 @@ import { ReservationService } from './shared/reservation.service';
     Ng2AutoCompleteModule,
     TypeaheadModule.forRoot()
   ],
-  providers: [PropertiesService, UsersService, ReservationService, Angular2TokenService],
+  providers: [PropertiesService, UsersService, ReservationService, TalksService, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
