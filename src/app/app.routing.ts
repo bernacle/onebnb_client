@@ -9,6 +9,7 @@ import { UpdatePasswordComponent } from './users/update-password/update-password
 import { ResultsComponent } from './results/results.component';
 import { Angular2TokenService } from 'angular2-token';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
+import { TalksListComponent } from './talks/talks-list/talks-list.component';
  
  
 // Cria nossas Rotas
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService]},
   { path: 'results', component: ResultsComponent},
-  { path: 'property/:id', component: PropertyDetailsComponent}
+  { path: 'property/:id', component: PropertyDetailsComponent},
+  { path: 'talks', component: TalksListComponent }
 
 ];
  
