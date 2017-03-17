@@ -36,6 +36,7 @@ import { ReservationService } from './shared/reservation.service';
 import { TalksService } from './shared/talks.service';
 import { MenuComponent } from './shared/menu/menu.component';
 import { TalksListComponent } from './talks/talks-list/talks-list.component';
+import { TalksChatComponent } from './talks/talks-chat/talks-chat.component';
  
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { TalksListComponent } from './talks/talks-list/talks-list.component';
     UserDetailBoxComponent,
     SendMessageComponent,
     MenuComponent,
-    TalksListComponent
+    TalksListComponent,
+    TalksChatComponent
   ],
   imports: [
     BrowserModule,

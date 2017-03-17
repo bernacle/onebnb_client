@@ -10,6 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { Angular2TokenService } from 'angular2-token';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
 import { TalksListComponent } from './talks/talks-list/talks-list.component';
+import { TalksChatComponent } from './talks/talks-chat/talks-chat.component';
  
  
 // Cria nossas Rotas
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService]},
   { path: 'results', component: ResultsComponent},
   { path: 'property/:id', component: PropertyDetailsComponent},
-  { path: 'talks', component: TalksListComponent }
+  { path: 'talks', component: TalksListComponent },
+  { path: 'talks/chat/:id', component: TalksChatComponent }
 
 ];
  
