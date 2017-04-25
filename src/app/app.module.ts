@@ -37,6 +37,7 @@ import { TalksService } from './shared/talks.service';
 import { MenuComponent } from './shared/menu/menu.component';
 import { TalksListComponent } from './talks/talks-list/talks-list.component';
 import { TalksChatComponent } from './talks/talks-chat/talks-chat.component';
+import { PropertyTripsComponent } from './property/property-trips/property-trips.component';
  
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { TalksChatComponent } from './talks/talks-chat/talks-chat.component';
     SendMessageComponent,
     MenuComponent,
     TalksListComponent,
-    TalksChatComponent
+    TalksChatComponent,
+    PropertyTripsComponent
   ],
   imports: [
     BrowserModule,
